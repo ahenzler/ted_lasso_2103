@@ -27,6 +27,10 @@ RSpec.describe Team do
     expect(richmond.total_salary).to eq(1600000)
     end
 
+    it 'has a highest paid' do
+    expect(richmond.highest_paid).to eq(roy)
+    end
+
     it 'has a captain' do
     expect(richmond.captain).to eq("Roy Kent")
     end
@@ -35,5 +39,4 @@ RSpec.describe Team do
     expect(richmond.positions_filled).to eq(["Center Midfielder", "Right-back Defender"])
     end
   end
-
 end

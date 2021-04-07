@@ -15,10 +15,14 @@ class Team
     end.sum
   end
 
-  def captain
+  def highest_paid
     @players.max_by do |player|
       player.salary
-    end.name
+    end
+  end
+
+  def captain
+    highest_paid.name
   end
 
   def positions_filled
